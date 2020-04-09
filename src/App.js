@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './scss/app.scss';
+import { Grid, GridColumn, Container } from 'semantic-ui-react';
+import CardComponent from './components/CardComponent.js';
+import HeaderComponent from './components/HeaderComponent.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// function App({title}) {
+//   return <div className="header">{title}</div>;
+// }
+class App extends React.Component {
+  render() {
+    return (
+      <>
+      <Container text>
+        <HeaderComponent/>
+      </Container>
+      <Grid container columns={3}>
+        <GridColumn>
+          <CardComponent />
+        </GridColumn>
+        <GridColumn>
+          <CardComponent />
+        </GridColumn>
+        <GridColumn>
+          <CardComponent />
+        </GridColumn>
+      </Grid>
+      </>
+    )
+  }
 }
+
 
 export default App;
