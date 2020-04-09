@@ -1,12 +1,13 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
+import profileImage from '../images/Sebie.png';
 
 class CardComponent extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Card>
-          <Image src="./images/Sebie.png" />
+          <Image src={profileImage}/>
           <Card.Content>
             <Card.Meta>
               <span className="date">Joined June 2020</span>

@@ -3,14 +3,13 @@ import './scss/app.scss';
 import { Grid, GridColumn, Container } from 'semantic-ui-react';
 import CardComponent from './components/CardComponent.js';
 import HeaderComponent from './components/HeaderComponent.js';
+import NavComponent from './components/NavComponent.js';
 
-// function App({title}) {
-//   return <div className="header">{title}</div>;
-// }
 class App extends React.Component {
   render() {
     return (
       <>
+      <NavComponent/>
       <Container text>
         <HeaderComponent/>
       </Container>
