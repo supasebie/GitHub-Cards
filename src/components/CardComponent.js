@@ -1,29 +1,28 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
-import profileImage from '../images/Sebie.png';
+import { Card, Icon, Image, Grid } from "semantic-ui-react";
 
 class CardComponent extends React.Component {
   render() {
+    const profile = this.props;
     return (
-      <React.Fragment>
+      <Grid.Column>
         <Card>
-          <Image src={profileImage}/>
+          <Image src={profile.avatar_url} />
           <Card.Content>
+            <Card.Header>{profile.name}</Card.Header>
             <Card.Meta>
-              <span className="date">Joined June 2020</span>
+              <span className="date">
+                {profile.url}
+              </span>
             </Card.Meta>
-            <Card.Description>
-              Sebie is a Web Developer living in Las Vegas, Nevada!
-            </Card.Description>
+            <Card.Description>{profile.company}</Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <a>
               <Icon name="user" />
-              9001 Over nine thousand friends!
-            </a>
+              {profile.followers}
           </Card.Content>
         </Card>
-      </React.Fragment>
+      </Grid.Column>
     );
   }
 }

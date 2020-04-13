@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Menu, Segment } from "semantic-ui-react";
+import React from "react";
+import { Menu } from "semantic-ui-react";
 
 class NavComponent extends React.Component {
   state = { activeItem: "home" };
@@ -35,10 +35,6 @@ class NavComponent extends React.Component {
             />
           </Menu.Menu>
         </Menu>
-
-        {/* <Segment>
-          <img src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-        </Segment> */}
       </div>
     );
   }
